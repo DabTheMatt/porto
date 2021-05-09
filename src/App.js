@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <Globals/>
-    <Home/>
+    <Home title="You Gab!"/>
     </>
   );
 }
