@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <Globals/>
-    <Home title="You Gab!"/>
+    <Home title="Porto!"/>
     </>
   );
 }
