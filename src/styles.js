@@ -27,3 +27,11 @@ export const setFlex = ({ x = "center", y = "center" } = {}) => {
 export const setBorder = ({size="2px", style="solid", color="black"}={}) => {
     return`border: ${size} ${style} ${color}`
 }
+
+export const setBackground = ({img = "", color = "red"}={}) => {
+    return`background: linear-gradient(${color}, ${color}) url(${img}) center / cover fixed no-repeat`
+}
+
+export const setTransition = ({property="all", duration="0.5s", curve="ease-in-out"}={}) => {
+    return`transition: ${property} ${duration} ${curve}}`
+}
