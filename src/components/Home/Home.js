@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { setColor, setRem, setShadow, setFlex } from "../../styles";
+import { setColor, setRem, setShadow, setFlex, setBackgroundImage} from "../../styles";
 import About from "../Home/About";
+import sweets from "../../images/sweets.jpeg";
+import road from "../../images/road.jpeg";
 
 const Home = ({ title }) => {
   return (
@@ -18,30 +20,28 @@ const Home = ({ title }) => {
 
 const HomeWrapper = styled.div`
   height: 100vh;
-  background: linear-gradient(
-    45deg,
-    ${setColor.lightAccent},
-    ${setColor.darkAccent}
-  );
+  ${setBackgroundImage({})};
+
   ${setFlex({})};
-  background-size: 400% 400%;
-  animation: gradient 4s ease infinite;
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+  
+
 
   h1 {
       color: ${setColor.mainWhite};
-      font-size: ${setRem(80)};
+      font-size: ${setRem(132)};
+      opacity: 0;
+      animation: blink 3s ease-in-out infinite;
+      text-transform: uppercase;
   }
+@keyframes blink {
+    
+    50% {
+        opacity: 1;
+        
+        
+    }
+}
+  
 
   
  

@@ -5,16 +5,20 @@ import {
   setRem,
   setBorder,
   setBackground,
+  setBackgroundImage,
   setTransition,
+  setFlex,
 } from "../../styles";
 import Section from "../global/Section";
+import { PrimaryBtn } from "../global/Buttons";
 
 const About = () => {
   return (
     <Section color="lightgray">
       <AboutWrapper>
-        <div>
+        <div className="titleBtnWrapper">
           <h2 className="trans">About Porto!</h2>
+          <PrimaryBtn>Find out more!</PrimaryBtn>
         </div>
         <div>
           <p>
@@ -41,7 +45,8 @@ const AboutWrapper = styled.div`
   width: 100%;
   padding: ${setRem(20)};
   ${setBorder({ size: setRem(2), color: setColor.lightAccent })};
-  ${setBackground({ color: "blue" })};
+  ${setBackgroundImage({img: "https://images.pexels.com/photos/6580691/pexels-photo-6580691.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"})};
+  /* background: url("https://images.pexels.com/photos/6580691/pexels-photo-6580691.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") center / cover fixed no-repeat; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: ${setRem(20)};
@@ -66,6 +71,10 @@ const AboutWrapper = styled.div`
   .trans:hover {
     color: red;
     cursor: pointer;
+  }
+  .titleBtnWrapper {
+      ${setFlex()};
+      flex-direction: column;
   }
 `;
 
